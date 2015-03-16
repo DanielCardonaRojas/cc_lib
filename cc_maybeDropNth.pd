@@ -1,0 +1,31 @@
+#N canvas 715 230 450 300 10;
+#X obj 143 176 cc_dropNth \$1;
+#X obj 96 21 inlet message;
+#X obj 326 19 inlet control;
+#X obj 143 133 spigot;
+#X obj 326 41 route 0 1;
+#X msg 326 63 1;
+#X msg 356 64 0;
+#X obj 326 94 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 176 107 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 293 128 spigot;
+#X obj 143 198 outlet;
+#X obj 396 42 loadbang;
+#X obj 215 22 inlet dropIdx;
+#X connect 0 0 10 0;
+#X connect 1 0 3 0;
+#X connect 1 0 9 0;
+#X connect 2 0 4 0;
+#X connect 2 0 8 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 1;
+#X connect 8 0 3 1;
+#X connect 9 0 10 0;
+#X connect 11 0 5 0;
+#X connect 12 0 0 1;
